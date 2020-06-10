@@ -1,0 +1,4 @@
+include ':domain'
+include ':domain'
+include ':app'
+rootProject.name = "FalabellaTest"

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/economicIndicatorList">
+
+    <fragment
+        android:id="@+id/economicIndicatorList"
+        android:name="com.falabella.test.presentation.ui.main.EconomicIndicatorListFragment"
+        android:label="fragment_economic_indicator_list"
+        tools:layout="@layout/fragment_economic_indicator_list" >
+        <action
+            android:id="@+id/action_economicIndicatorList_to_economicIndicatorDetail"
+            app:destination="@id/economicIndicatorDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/economicIndicatorDetail"
+        android:name="com.falabella.test.presentation.ui.main.EconomicIndicatorDetailFragment"
+        android:label="fragment_economic_indicator_detail"
+        tools:layout="@layout/fragment_economic_indicator_detail" >
+        <argument
+            android:name="economicIndicator"
+            app:argType="com.falabella.test.presentation.ui.main.model.EconomicIndicator" />
+    </fragment>
+</navigation>
